@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\TodosController;
+
+Route::get('/', 'TodosController@index');
+Route::resource('todo', 'TodosController');
